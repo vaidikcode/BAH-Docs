@@ -166,17 +166,3 @@ geodiff refined_dem.tif initial_dem.tif
 
 ---
 
-## 🚀 Summary
-
-You don't need to build everything from scratch. Using the Ames Stereo Pipeline:
-
-* Get an **initial DEM** (either from stereo or flat guess)
-* Use `sfs` to improve it using image brightness
-* Get **realistic surface shapes** even from mono images
-* Visualize and validate in QGIS
-
-This is a great project for learning computer vision, remote sensing, and lunar mapping with real data.
-
----
-
-Would you like a sample dataset and runnable script for this pipeline?
