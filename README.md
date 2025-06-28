@@ -144,6 +144,12 @@ Where:
 
 > This formula tells you how much of the light hits the surface **head-on** (brighter) vs **at an angle** (dimmer).
 
+### 📊 Visual Representation of Reflectance Map
+
+![Reflectance Map in p,q terms](Screenshot%202025-06-28%20182106.png)
+
+This visual shows how the reflectance varies across different slope values (p, q). The reflectance map helps us understand the relationship between surface orientation and brightness, which is crucial for the Shape from Shading algorithm.
+
 ### 🌞 Example
 
 Say the sunlight comes from the direction:
@@ -182,4 +188,44 @@ $$
 | `R(n)` | Brightness                 | How much light hits the surface       |
 
 ---
+
+# Solutions to N
+
+![Solutions to N](Screenshot%202025-06-28%20183423.png)
+
+Different approaches and methods for solving the normal vector N in Shape from Shading problems. This section explores various computational techniques and mathematical solutions for determining surface normals from intensity information.
+
+1. Ofcourse n in not unique. It lies in the ecllipse.
+2. This is because we have one known `Lout` and 2 unknown ps, qs.
+
+There's one exception to this. When cos0 means s and n overlap and ther's only one solution that is a point. Means all ellipse when collapse to a point.
+3. Special case when p and q goes to infinity To handle n.
+
+---
+
+# Further Analysis and Implementation
+
+![Implementation Details](Screenshot%202025-06-28%20184500.png)
+
+This section covers additional implementation details and advanced considerations for the Shape from Shading algorithm. The image shows further mathematical formulations and practical approaches for handling edge cases and optimizing the SFS solution.
+
+# Penalising and Constraints
+
+As here unknwons are greater than knowns
+We have to specify constraints and penalisation creteria's.
+
+![Constraints](constraints.png)
+
+The two Constraints are
+![12C](12C.png)
+
+---
+
+# Normal Map to Surface geometry
+
+1. We have p,q surface gradients. Means access to the gradients.
+
+![N](N.png)
+
+
 
